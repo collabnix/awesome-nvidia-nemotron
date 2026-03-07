@@ -351,12 +351,4 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before sub
 - Tools or integrations that use Nemotron models
 - New datasets released by NVIDIA for Nemotron training
 
----
 
-<div align="center">
-
-Made with ❤️ by the community · Maintained by [@ajeetraina](https://github.com/ajeetraina)
-
-⭐ Star this repo if you find it useful!
-
-</div>
