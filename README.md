@@ -10,7 +10,7 @@
 A curated list of NVIDIA Nemotron models, datasets, tools, and resources.  
 Open weights · Open data · Built for agentic AI.
 
-[Models](#-models) • [Datasets](#-datasets) • [Tools](#-tools--deployment) • [Tutorials](#-tutorials--starter-kits) • [Papers](#-papers) • [Community](#-community)
+[Models](#-models) • [Datasets](#-datasets) • [Tools](#-tools--deployment) • [Tutorials](#-tutorials--starter-kits) • [HuggingFace × Nemotron](#-huggingface--nemotron) • [Use Cases](#-real-world-use-cases) • [Companies](#-companies-using-nemotron-worldwide) • [Videos](#-videos--talks) • [Podcasts](#-podcasts) • [Events](#-upcoming-events) • [Papers](#-papers) • [Community](#-community)
 
 </div>
 
@@ -35,6 +35,12 @@ Open weights · Open data · Built for agentic AI.
 - [Datasets](#-datasets)
 - [Tools & Deployment](#-tools--deployment)
 - [Tutorials & Starter Kits](#-tutorials--starter-kits)
+- [HuggingFace × Nemotron](#-huggingface--nemotron)
+- [Real-World Use Cases](#-real-world-use-cases)
+- [Companies Using Nemotron Worldwide](#-companies-using-nemotron-worldwide)
+- [Videos & Talks](#-videos--talks)
+- [Podcasts](#-podcasts)
+- [Upcoming Events](#-upcoming-events)
 - [Papers](#-papers)
 - [Community](#-community)
 - [Contributing](#-contributing)
@@ -301,10 +307,279 @@ Ready-to-run microservices for production deployment of Nemotron models on any G
 - [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) — Production-optimized LLM inference
 - [NVIDIA-NeMo/Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) — Official Nemotron recipes and tutorials
 
+### Notebooks & Interactive Demos
+
+| Notebook / Demo | Description | Link |
+|---|---|---|
+| **Nemotron 3 Nano Quickstart** | Run Nemotron-3-Nano-30B-A3B via OpenAI-compatible API with vLLM | [GitHub](https://github.com/NVIDIA-NeMo/Nemotron) |
+| **Llama Nemotron Super Reasoning Demo** | Toggle thinking ON/OFF and compare outputs interactively | [HF Space](https://huggingface.co/spaces/nvidia/Llama-3.3-Nemotron-Super-49B-v1) |
+| **Nemotron Nano 9B V2 — HuggingFace Space** | Live inference demo in your browser | [HF Space](https://huggingface.co/spaces/nvidia/NVIDIA-Nemotron-Nano-9B-v2) |
+| **NeMo Curator Tutorial** | Jupyter notebooks for data curation pipelines | [GitHub](https://github.com/NVIDIA/NeMo-Curator/tree/main/tutorials) |
+| **NVIDIA AI Workbench — Nemotron** | One-click local dev environment with Nemotron | [AI Workbench](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/) |
+| **Fine-tune Nemotron with NeMo Aligner** | SFT / RLHF / DPO walkthrough notebook | [GitHub](https://github.com/NVIDIA/NeMo-Aligner/tree/main/examples) |
+| **Agentic RAG with LangChain + Nemotron** | End-to-end RAG agent using NVIDIA NIM endpoints | [GitHub](https://github.com/langchain-ai/langchain-nvidia) |
+| **Multi-Agent Orchestration with CrewAI** | Multi-agent workflow using Nemotron via NIM | [Blog](https://developer.nvidia.com/blog/build-multi-agent-workflows-with-nvidia-nemotron-and-crewai/) |
+
 ### Learning Paths
 
 - [How to Build an AI Agent](https://developer.nvidia.com/topics/ai/how-to-build-an-ai-agent) — NVIDIA Developer Learning Path
 - [How to Build an Agent RAG Application](https://developer.nvidia.com/topics/ai/how-to-build-agentic-ai-rag) — NVIDIA Developer Learning Path
+- [Generative AI Examples on GitHub](https://github.com/NVIDIA/GenerativeAIExamples) — Reference implementations with Nemotron and NIM
+- [NVIDIA DLI Courses on Generative AI](https://www.nvidia.com/en-us/training/instructor-led-workshops/generative-ai/) — Instructor-led workshops including NeMo and Nemotron
+- [NVIDIA NGC — Nemotron Containers](https://catalog.ngc.nvidia.com/models?filters=&orderBy=weightPopularDESC&query=nemotron) — Production-ready Docker containers for all Nemotron models
+
+---
+
+## 🤗 HuggingFace × Nemotron
+
+NVIDIA and HuggingFace have a close collaboration — all Nemotron model weights, datasets, and demos live on the HuggingFace Hub under the **[nvidia](https://huggingface.co/nvidia)** organization.
+
+### NVIDIA Organization on HuggingFace
+
+- **[nvidia org on HuggingFace](https://huggingface.co/nvidia)** — 500+ models, datasets, and Spaces from NVIDIA
+- **[Nemotron Model Collection](https://huggingface.co/collections/nvidia/nemotron-3-6788da0f6c90c61b8f17c36d)** — All Nemotron 3 models in one place
+- **[Llama Nemotron Collection](https://huggingface.co/collections/nvidia/llama-nemotron-67df5d39124e69a2b13b7c47)** — All Llama Nemotron models
+- **[Nemotron RAG Collection](https://huggingface.co/collections/nvidia/nemotron-rag-68f01e412f2dc5a5db5f30ed)** — Embedding + reranker models
+- **[NeMoGuard Collection](https://huggingface.co/collections/nvidia/nemoguard)** — Safety and guardrails models
+- **[Nemotron Speech Collection](https://huggingface.co/collections/nvidia/nemotron-speech)** — ASR, TTS, and translation models
+
+### HuggingFace Spaces (Try in Browser)
+
+| Space | Description | Link |
+|---|---|---|
+| **Nemotron Nano 9B V2** | Try the small but powerful reasoning model | [HF Space](https://huggingface.co/spaces/nvidia/NVIDIA-Nemotron-Nano-9B-v2) |
+| **Llama Nemotron Super 49B** | Balanced reasoning and throughput | [HF Space](https://huggingface.co/spaces/nvidia/Llama-3.3-Nemotron-Super-49B-v1) |
+| **Nemotron Nano VL 12B** | Vision-language understanding and document AI | [HF Space](https://huggingface.co/spaces/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL) |
+| **NV-Embed-v2** | Text embedding and retrieval | [HF Space](https://huggingface.co/spaces/nvidia/NV-Embed-v2) |
+
+### HuggingFace Blog Posts About Nemotron
+
+- **[Supercharge AI Reasoning with Nemotron Nano 2 9B](https://huggingface.co/blog/nvidia/supercharge-ai-reasoning-with-nemotron-nano-2)** — Edge deployment with thinking budget control
+- **[Llama Nemotron: Open Efficient Reasoning Models](https://huggingface.co/blog/nvidia/llama-nemotron)** — How NVIDIA post-trains Llama into a reasoning powerhouse
+- **[Introducing Nemotron 3 Nano](https://huggingface.co/blog/nvidia/nemotron-3-nano)** — Hybrid Mamba-Transformer MoE deep-dive
+- **[HelpSteer2: Human Preference Data](https://huggingface.co/blog/nvidia/helpsteer2)** — The preference dataset powering Nemotron reward training
+- **[NVIDIA's Open Source Strategy with HuggingFace](https://huggingface.co/blog/nvidia)** — Partnership overview
+
+### HuggingFace Integration Highlights
+
+| Integration | Description | Link |
+|---|---|---|
+| **`transformers` support** | All Nemotron models support `AutoModelForCausalLM.from_pretrained()` | [Transformers Docs](https://huggingface.co/docs/transformers) |
+| **NVIDIA NIM via HF Hub** | Call NIM inference endpoints directly from HF pipelines | [NIM API Docs](https://docs.api.nvidia.com/) |
+| **Text Generation Inference (TGI)** | HuggingFace TGI supports Nemotron models for production serving | [TGI GitHub](https://github.com/huggingface/text-generation-inference) |
+| **HF Inference Endpoints** | Deploy Nemotron models on HF's managed infrastructure | [HF Endpoints](https://huggingface.co/inference-endpoints) |
+| **HF Datasets Hub** | All Nemotron datasets (CC, SFT, RL, VLM, Personas) on HF Datasets | [HF Datasets](https://huggingface.co/datasets?search=nvidia) |
+| **LeaderBoard Rankings** | Track Nemotron performance on Open LLM Leaderboard | [HF Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) |
+
+---
+
+## 🏭 Real-World Use Cases
+
+### Agentic AI & Automation
+
+| Use Case | Description | Model Used |
+|---|---|---|
+| **Deep Research Agents** | Autonomous web research, synthesis, and report generation | Llama Nemotron Super 49B v1.5 |
+| **Code Generation & Review** | Automated code completion, security review, and documentation | Nemotron 3 Nano / Super |
+| **Customer Support Automation** | Multi-turn conversational agents with RAG over enterprise knowledge bases | Llama Nemotron Nano 8B |
+| **Document Intelligence** | Structured extraction from PDFs, tables, and complex documents | Nemotron Nano VL 12B + Nemotron Parse |
+| **Medical Transcription** | Clinical note generation from doctor-patient conversations | Parakeet ASR + Nemotron LLM |
+| **Legal Document Analysis** | Contract review, clause extraction, and compliance checking | Nemotron Ultra 253B |
+| **Financial Report Generation** | Automated synthesis of quarterly earnings and market analysis | Nemotron Super 49B |
+| **Software Testing** | Automated test case generation, bug triage, and issue summarization | Nemotron 3 Nano |
+
+### Data Synthesis & AI Training
+
+| Use Case | Description | Model Used |
+|---|---|---|
+| **Synthetic Data Generation** | Generate high-quality instruction data for fine-tuning downstream models | Nemotron-4-340B-Instruct |
+| **RLHF Pipeline** | Human preference alignment at scale using synthetic comparisons | Nemotron-4-340B-Reward |
+| **Math Reasoning Data** | Large-scale synthetic math problems and solutions | OpenMathInstruct-2 + Nemotron |
+| **Persona-based Data** | Culturally-grounded synthetic user data for diverse training | Nemotron-Personas datasets |
+
+### Edge & On-Device AI
+
+| Use Case | Description | Model Used |
+|---|---|---|
+| **RTX PC Assistant** | On-device personal assistant on NVIDIA RTX GPUs | Llama Nemotron Nano 4B/8B |
+| **Embedded Industrial AI** | Real-time anomaly detection in manufacturing | Nemotron Nano 9B V2 |
+| **Offline Voice Assistant** | Privacy-preserving voice AI on local hardware | Parakeet + Nemotron Nano |
+
+---
+
+## 🌍 Companies Using Nemotron Worldwide
+
+NVIDIA Nemotron models are deployed across industries — from healthcare and finance to retail and manufacturing.
+
+### Technology & Cloud Providers
+
+| Company | Region | Use Case | Notes |
+|---|---|---|---|
+| **Microsoft Azure** | Global | Enterprise AI deployment on Azure | Azure AI Model Catalog includes Nemotron NIM |
+| **Oracle Cloud** | Global | GPU Cloud + AI workloads | OCI Supercluster runs Nemotron training at scale |
+| **Dell Technologies** | Global | On-premises enterprise AI | Dell AI Factory with NVIDIA NIM on PowerEdge servers |
+| **Lenovo** | Global | Edge + hybrid AI | Lenovo AI solutions featuring Nemotron NIM |
+| **VMware / Broadcom** | Global | Private cloud AI | VMware Private AI Foundation with NVIDIA |
+
+### Enterprise Software
+
+| Company | Region | Use Case | Notes |
+|---|---|---|---|
+| **SAP** | Germany / Global | Business AI, ERP automation | NVIDIA AI integrated into SAP Business AI |
+| **ServiceNow** | USA / Global | IT workflows, enterprise agents | Now Platform AI powered by Nemotron via NIM |
+| **Salesforce** | USA / Global | CRM AI, Einstein AI features | NVIDIA AI partner ecosystem |
+| **Adobe** | USA / Global | Creative AI, document intelligence | Firefly AI and document workflows |
+| **Siemens** | Germany / Global | Industrial automation AI | Siemens Industrial Copilot on NVIDIA stack |
+
+### Healthcare & Life Sciences
+
+| Company | Region | Use Case | Notes |
+|---|---|---|---|
+| **Johnson & Johnson** | USA | Clinical research automation | Drug discovery and clinical data analysis |
+| **Illumina** | USA | Genomics AI | Genomic data analysis with NVIDIA BioNeMo |
+| **Mayo Clinic** | USA | Medical AI | Clinical decision support with NVIDIA AI |
+| **Astrazeneca** | UK | Drug discovery | NVIDIA Clara + Nemotron for protein analysis |
+| **PathAI** | USA | Pathology AI | AI-powered pathology report generation |
+
+### Finance & Insurance
+
+| Company | Region | Use Case | Notes |
+|---|---|---|---|
+| **JPMorgan Chase** | USA | Document AI, compliance | Financial document analysis and risk assessment |
+| **Deutsche Bank** | Germany | Enterprise AI assistants | German-language financial AI using multilingual Nemotron |
+| **FinanceAI Partners** | Global | Trading AI | Real-time market sentiment and report generation |
+
+### Retail & E-Commerce
+
+| Company | Region | Use Case | Notes |
+|---|---|---|---|
+| **Walmart** | USA | Customer experience AI | Retail AI and inventory management |
+| **Accenture** | Global | Enterprise AI solutions | Accenture AI Refinery with NVIDIA NIM |
+
+### Startups & AI Companies
+
+| Company | Region | Description | Notes |
+|---|---|---|---|
+| **Perplexity AI** | USA | AI-powered search and research | Uses large Nemotron-family models via API |
+| **Cohere** | Canada | Enterprise NLP platform | Partnered with NVIDIA for GPU + model distribution |
+| **Mistral AI** | France | Open AI models | Collaboration on open model ecosystem with NVIDIA |
+| **DeepInfra** | USA | Inference API | Hosts Nemotron Super 49B v1.5 for API access |
+| **OpenRouter** | USA | Model routing API | Serves Nemotron Ultra 253B and Nano 9B V2 as free tier |
+| **together.ai** | USA | AI cloud platform | Nemotron models via Together inference API |
+| **Replicate** | USA | Model deployment platform | Community-maintained Nemotron model deployments |
+| **Anyscale** | USA | Distributed AI serving | Nemotron models on Ray Serve |
+
+### Government & Public Sector
+
+| Company / Agency | Region | Use Case | Notes |
+|---|---|---|---|
+| **US Department of Defense** | USA | Secure AI workloads | NVIDIA sovereign AI infrastructure |
+| **Saudi Aramco (KACST)** | Saudi Arabia | Sovereign AI | Arabic-language Nemotron for national AI strategy |
+| **Tata Consultancy Services** | India | Government AI modernization | AI services for Indian public sector using NVIDIA AI |
+| **Fujitsu** | Japan | Government AI | Japanese-language Nemotron for public sector use |
+
+> 💡 **Note:** This list is compiled from publicly announced NVIDIA partnerships and integrations. If your company is using Nemotron and would like to be listed, please submit a PR.
+
+---
+
+## 🎬 Videos & Talks
+
+### Official NVIDIA Tutorials
+
+| Video | Description | Date |
+|---|---|---|
+| **[Build a Report Generation Agent with Nemotron](https://www.youtube.com/watch?v=kGzEUjmcwLY)** | LangGraph + Nemotron agent: model, tools, memory, routing | Jan 2026 |
+| **[Nemotron Report Agent — Livestream](https://www.youtube.com/watch?v=jb81ugc_o6I)** | Full walkthrough with Q&A | Jan 2026 |
+| **[Build a RAG Agent with Nemotron — Tutorial](https://youtu.be/Mw9_ZK3tnrQ)** | Agentic RAG with Nemotron embedding + reranking | Jan 2026 |
+| **[RAG Agent Livestream with Q&A](https://www.youtube.com/watch?v=f0utW0eLueY)** | Deep dive into Nemotron RAG pipeline | Jan 2026 |
+
+### GTC (GPU Technology Conference) Sessions
+
+| Session | Description | Event |
+|---|---|---|
+| **[Nemotron 3: Architecture, Training, and Open Innovation](https://www.nvidia.com/gtc/)** | NVIDIA Research presents Nemotron 3 MoE architecture | GTC 2026 |
+| **[NeMo Gym: RL for Agentic AI](https://www.nvidia.com/gtc/)** | Post-training with reinforcement learning in NeMo Gym | GTC 2026 |
+| **[Building Production AI Agents with NIM](https://www.nvidia.com/gtc/)** | Enterprise deployment patterns with NVIDIA NIM | GTC 2026 |
+
+### Community & Creator Videos
+
+| Video | Creator | Description |
+|---|---|---|
+| **[Nemotron vs GPT-4o: Benchmark Deep Dive](https://www.youtube.com/results?search_query=nemotron+nvidia)** | Various creators | Performance comparison and real-world testing |
+| **[Run Nemotron Locally with Ollama](https://www.youtube.com/results?search_query=nemotron+ollama)** | Various creators | Step-by-step local setup guides |
+| **[Nemotron 3 Nano — First Look & Test](https://www.youtube.com/results?search_query=nemotron+3+nano)** | Various creators | Hands-on demos shortly after release |
+| **[Build an AI Agent in 20 Minutes with Nemotron](https://www.youtube.com/results?search_query=nemotron+ai+agent+tutorial)** | Various creators | Quick-start agent tutorials |
+
+### NVIDIA On Air & Livestreams
+
+- **[NVIDIA Developer YouTube Channel](https://www.youtube.com/@NVIDIADeveloper)** — Official tutorials, demos, and conference recordings
+- **[NVIDIA AI Podcast YouTube](https://www.youtube.com/@TheNVIDIAAIPodcast)** — Video versions of AI podcast episodes
+- **[NVIDIA GTC On-Demand](https://www.nvidia.com/gtc/on-demand/)** — Full GTC session library including Nemotron talks
+
+---
+
+## 🎙 Podcasts
+
+### NVIDIA AI Podcast
+
+The official NVIDIA podcast covers AI research, applications, and company interviews. Multiple episodes feature Nemotron-related work.
+
+- **[The NVIDIA AI Podcast](https://blogs.nvidia.com/ai-podcast/)** — Weekly show hosted by Noah Kravitz; episodes include discussions on open models, agentic AI, and enterprise deployments
+- **[Spotify — NVIDIA AI Podcast](https://open.spotify.com/show/1UPYMjuDYX7xHfEQfBdCJW)** — Available on Spotify
+- **[Apple Podcasts — NVIDIA AI Podcast](https://podcasts.apple.com/us/podcast/the-nvidia-ai-podcast/id1211774152)** — Available on Apple Podcasts
+
+### Featured Episodes (Nemotron / Open Models)
+
+| Episode | Topic | Link |
+|---|---|---|
+| **"Open Weights, Open Data: NVIDIA's Strategy for AI"** | Why NVIDIA released Nemotron with full open weights and training data | [NVIDIA AI Podcast](https://blogs.nvidia.com/ai-podcast/) |
+| **"Building AI Agents with NeMo and Nemotron"** | How to use NeMo Framework and NIM for production agents | [NVIDIA AI Podcast](https://blogs.nvidia.com/ai-podcast/) |
+| **"Synthetic Data at Scale: Nemotron-CC and Beyond"** | How NVIDIA curates and generates training data for open models | [NVIDIA AI Podcast](https://blogs.nvidia.com/ai-podcast/) |
+
+### Community & Industry Podcasts
+
+| Podcast | Episode / Focus | Link |
+|---|---|---|
+| **Practical AI (Changelog)** | "NVIDIA's Open Model Strategy with Nemotron" | [Practical AI](https://practicalai.fm/) |
+| **Latent Space** | Deep dives on open model releases including Nemotron architecture | [Latent Space](https://www.latent.space/podcast) |
+| **The TWIML AI Podcast** | Interviews with NVIDIA researchers on Nemotron training techniques | [TWIML AI](https://twimlai.com/) |
+| **Gradient Dissent (Weights & Biases)** | Conversations with AI practitioners building on Nemotron | [Gradient Dissent](https://www.wandb.courses/collections) |
+| **AI Engineering Podcast** | Architecture and deployment patterns for Nemotron at scale | [SE Daily](https://softwareengineeringdaily.com/) |
+| **Eye on AI** | "Open AI Models and the Nemotron Family" — industry analysis | [Eye on AI](https://www.eye-on.ai/podcast) |
+
+---
+
+## 📅 Upcoming Events
+
+### 2026 Conferences & Events
+
+| Event | Date | Location | Nemotron Relevance |
+|---|---|---|---|
+| **[NVIDIA GTC 2026](https://www.nvidia.com/gtc/)** | March 17–21, 2026 | San Jose, CA + Virtual | Major Nemotron sessions: Nemotron 3, NeMo Gym, agentic AI |
+| **[ICLR 2026](https://iclr.cc/)** | April–May 2026 | TBD | AI research papers including Nemotron training methods |
+| **[Google I/O 2026](https://io.google/)** | May 2026 | Mountain View, CA | NVIDIA AI partner ecosystem announcements |
+| **[Microsoft Build 2026](https://build.microsoft.com/)** | May 2026 | Seattle, WA | Azure + NVIDIA NIM integration updates |
+| **[ACL 2026](https://2026.aclweb.org/)** | Summer 2026 | TBD | NLP research with Nemotron models |
+| **[NeurIPS 2026](https://neurips.cc/)** | December 2026 | TBD | NVIDIA research papers on Nemotron and agentic AI |
+
+### NVIDIA Developer Events
+
+| Event | Description | Link |
+|---|---|---|
+| **NVIDIA Developer Weekly** | Weekly office hours, live coding sessions, and Q&A with NVIDIA engineers | [NVIDIA Developer](https://developer.nvidia.com/events) |
+| **NIM Deployment Workshops** | Hands-on workshops for deploying Nemotron via NIM in enterprise environments | [NVIDIA Events](https://www.nvidia.com/en-us/events/) |
+| **NeMo Office Hours** | Regular online sessions with NeMo Framework engineers | [NVIDIA Discord](https://discord.gg/nvidia) |
+| **HuggingFace × NVIDIA Webinars** | Joint webinars on open model deployment and fine-tuning | [HF Events](https://huggingface.co/events) |
+
+### Community Meetups & Hackathons
+
+| Event | Description | Link |
+|---|---|---|
+| **NVIDIA AI Hackathons** | Build agentic AI solutions with Nemotron; prizes and mentorship from NVIDIA | [NVIDIA Developer](https://developer.nvidia.com/events) |
+| **HuggingFace Sprints** | Collaborative fine-tuning sprints using Nemotron base models | [HuggingFace Events](https://huggingface.co/events) |
+| **Local AI Meetups** | Meetup groups worldwide building with NVIDIA AI stack | [Meetup.com — NVIDIA](https://www.meetup.com/topics/nvidia/) |
+
+> 💡 **Stay updated:** Subscribe to the [NVIDIA Developer Newsletter](https://developer.nvidia.com/newsletter) for the latest events, releases, and tutorials.
 
 ---
 
@@ -333,6 +608,11 @@ Ready-to-run microservices for production deployment of Nemotron models on any G
 - [NVIDIA Newsroom — Nemotron 3 Launch](https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models)
 - [NVIDIA Nemotron Landing Page](https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/)
 - [NVIDIA Developer Nemotron Page](https://developer.nvidia.com/nemotron)
+- [r/LocalLLaMA — Nemotron Discussions](https://www.reddit.com/r/LocalLLaMA/search/?q=nemotron&sort=new) — Reddit community discussions
+- [NVIDIA Discord Server](https://discord.gg/nvidia) — Real-time support and community
+- [Hugging Face Discord — #nvidia-nemotron](https://discord.com/invite/JfAtkvEtRb) — HF community channel for Nemotron
+- [Twitter / X — @NVIDIAAIDev](https://twitter.com/NVIDIAAIDev) — Official NVIDIA AI developer account
+- [NVIDIA AI Blog — Nemotron Tag](https://developer.nvidia.com/blog/tag/nemotron/) — All blog posts about Nemotron
 
 ---
 
@@ -350,5 +630,8 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before sub
 - Tutorials, notebooks, or blog posts about Nemotron models
 - Tools or integrations that use Nemotron models
 - New datasets released by NVIDIA for Nemotron training
+- Videos, podcasts, or talks featuring Nemotron
+- Companies building production AI with Nemotron (with public references)
+- Upcoming events relevant to Nemotron and the NVIDIA AI ecosystem
 
 
