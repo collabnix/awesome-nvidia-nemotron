@@ -3,7 +3,7 @@ name: Nemotron Auto Curator
 on:
   # Run every Monday at 9am UTC
   schedule:
-    - cron: "0 9 * * 1"
+    - cron: "0 9 * * *"
 
   # Allow manual trigger with custom prompt
   workflow_dispatch:
