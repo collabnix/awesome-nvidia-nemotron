@@ -64,7 +64,7 @@ jobs:
       - name: Run Nemotron Curator Agent
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           docker agent run ./auto-curator-agent/nemotron-curator.yaml \
             "${{ steps.prompt.outputs.prompt }}"
