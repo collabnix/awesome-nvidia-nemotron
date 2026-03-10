@@ -63,7 +63,7 @@ jobs:
 
       - name: Run Nemotron Curator Agent
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           docker agent run ./auto-curator-agent/nemotron-curator.yaml \
