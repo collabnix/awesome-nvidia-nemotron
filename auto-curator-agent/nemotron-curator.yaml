@@ -11,10 +11,10 @@ version: "3"
 #   4. Submitting PRs to update the awesome list
 #
 # Powered by Nemotron model on HuggingFace Inference API
-# Requires: HF_TOKEN (Hugging Face API token)
+# Requires: NVIDIA_API_KEY (get free credits at build.nvidia.com)
 #
 # Usage:
-#   export HF_TOKEN=your_huggingface_token
+#   export NVIDIA_API_KEY=your_nvidia_api_key
 #   docker agent run ./nemotron-curator.yaml "Find new Nemotron blog posts and papers from the last week"
 #   docker agent run ./nemotron-curator.yaml "Check all links in the awesome list for broken URLs"
 #   docker agent run ./nemotron-curator.yaml "Search for new Nemotron models released on HuggingFace"
@@ -22,26 +22,26 @@ version: "3"
 #   docker agent run ./nemotron-curator.yaml "Create a PR adding the latest resources you found"
 # =============================================================================
 
-# HuggingFace Inference API as provider (OpenAI-compatible endpoint)
-# Nemotron is available at nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
-# See: https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+# NVIDIA API at build.nvidia.com — OpenAI-compatible, free tier available
+# Sign up at https://build.nvidia.com to get your API key
+# Requires: NVIDIA_API_KEY
 providers:
-  huggingface:
+  nvidia:
     api_type: openai_chatcompletions
-    base_url: https://router.huggingface.co/hf-inference/models/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF/v1
-    token_key: HF_TOKEN
+    base_url: https://integrate.api.nvidia.com/v1
+    token_key: NVIDIA_API_KEY
 
 models:
-  # Primary model: Nemotron 70B for complex curation and reasoning tasks
+  # Primary model: Llama Nemotron Ultra for complex curation and reasoning tasks
   smart:
-    provider: huggingface
-    model: nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+    provider: nvidia
+    model: nvidia/llama-3.1-nemotron-ultra-253b-v1
     max_tokens: 8192
 
-  # Fast model: Nemotron Nano for simpler validation tasks
+  # Fast model: Llama Nemotron Nano for simpler validation tasks
   fast:
-    provider: huggingface
-    model: nvidia/Llama-3.1-Nemotron-Nano-8B-v1
+    provider: nvidia
+    model: nvidia/llama-3.1-nemotron-nano-8b-v1
     max_tokens: 4096
 
 agents:
@@ -124,6 +124,8 @@ agents:
       - type: todo
       - type: mcp
         ref: docker:github
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
 
   # ---------------------------------------------------------------------------
   # DISCOVERER AGENT: Finds new Nemotron resources
@@ -216,6 +218,8 @@ agents:
       - type: filesystem
       - type: mcp
         ref: docker:github
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
 
   # ---------------------------------------------------------------------------
   # VALIDATOR AGENT: Checks links and content quality
@@ -264,6 +268,8 @@ agents:
       - type: think
       - type: mcp
         ref: docker:github
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
 
   # ---------------------------------------------------------------------------
   # PUBLISHER AGENT: Creates branches and PRs
@@ -346,3 +352,5 @@ agents:
       - type: think
       - type: mcp
         ref: docker:github
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
