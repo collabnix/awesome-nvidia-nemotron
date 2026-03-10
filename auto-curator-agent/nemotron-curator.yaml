@@ -125,7 +125,7 @@ agents:
       - type: mcp
         ref: docker:github
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GITHUB_PERSONAL_ACCESS_TOKEN
 
   # ---------------------------------------------------------------------------
   # DISCOVERER AGENT: Finds new Nemotron resources
@@ -219,7 +219,7 @@ agents:
       - type: mcp
         ref: docker:github
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GITHUB_PERSONAL_ACCESS_TOKEN
 
   # ---------------------------------------------------------------------------
   # VALIDATOR AGENT: Checks links and content quality
@@ -269,7 +269,7 @@ agents:
       - type: mcp
         ref: docker:github
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GITHUB_PERSONAL_ACCESS_TOKEN
 
   # ---------------------------------------------------------------------------
   # PUBLISHER AGENT: Creates branches and PRs
@@ -353,4 +353,4 @@ agents:
       - type: mcp
         ref: docker:github
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: $GH_PAT
+          GITHUB_PERSONAL_ACCESS_TOKEN: $GITHUB_PERSONAL_ACCESS_TOKEN
