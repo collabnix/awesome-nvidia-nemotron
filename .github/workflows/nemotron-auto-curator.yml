@@ -1,7 +1,7 @@
 name: Nemotron Auto Curator
 
 on:
-  # Run every Monday at 9am UTC
+  # Run every day at 9am UTC
   schedule:
     - cron: "0 9 * * *"
 
@@ -11,7 +11,7 @@ on:
       prompt:
         description: "Curator prompt to run"
         required: false
-        default: "Find new Nemotron resources from the last week and create a PR adding them"
+        default: "Find new Nemotron resources from the last week and raise a PR so that folks can see that the agent is managing the repo"
         type: string
       task:
         description: "Curator task"
@@ -32,10 +32,21 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Create agent-bot label (if missing)
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh label create "agent-bot" \
+            --description "Pull request raised automatically by the Nemotron curator agent" \
+            --color "0075ca" \
+            --repo "${{ github.repository }}" \
+          || echo "Label already exists, skipping."
 
       - name: Install Docker Agent
         run: |
@@ -56,8 +67,9 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             PROMPT="${{ github.event.inputs.prompt }}"
           else
-            # Default scheduled prompt
-            PROMPT="Find new Nemotron resources (models, papers, blogs, tools) published in the last 7 days and create a PR adding them to the awesome list"
+            # Default scheduled prompt — always ends with a PR instruction so
+            # contributors can see that the agent is managing the repo.
+            PROMPT="Find new Nemotron resources (models, papers, blogs, tools) published in the last 7 days. Then raise a Pull Request adding them to the awesome list so that folks can see that the agent is managing the repo. Label the PR with 'agent-bot'."
           fi
           echo "prompt=${PROMPT}" >> $GITHUB_OUTPUT
 
@@ -76,6 +88,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Trigger**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Prompt**: ${{ steps.prompt.outputs.prompt }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Model**: nvidia/Llama-3.1-Nemotron-70B-Instruct-HF" >> $GITHUB_STEP_SUMMARY
+          echo "- **Model**: nvidia/llama-3.1-nemotron-ultra-253b-v1" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Check the [Pull Requests](https://github.com/${{ github.repository }}/pulls) tab for any curator PRs." >> $GITHUB_STEP_SUMMARY
+          echo "PRs raised by the agent are labeled **agent-bot** and are visible in the" >> $GITHUB_STEP_SUMMARY
+          echo "[Pull Requests](https://github.com/${{ github.repository }}/pulls?q=label%3Aagent-bot) tab." >> $GITHUB_STEP_SUMMARY
