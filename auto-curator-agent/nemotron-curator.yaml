@@ -53,12 +53,12 @@ agents:
     skills: true
     description: |
       Coordinates maintenance of the awesome-nvidia-nemotron list at
-      github.com/ajeetraina/awesome-nvidia-nemotron. Discovers new resources,
+      github.com/collabnix/awesome-nvidia-nemotron. Discovers new resources,
       validates links, and submits PRs. Powered by Nemotron itself.
     instruction: |
       You are the curator of the awesome-nvidia-nemotron list, a community-maintained
       collection of NVIDIA Nemotron resources hosted at:
-      https://github.com/ajeetraina/awesome-nvidia-nemotron
+      https://github.com/collabnix/awesome-nvidia-nemotron
 
       You are powered by NVIDIA's Nemotron model — an agentic AI model curating
       resources about the Nemotron family itself.
@@ -111,7 +111,7 @@ agents:
       - HuggingFace model entries should include model card link and key specs
 
       ## Repository Details
-      - Owner: ajeetraina
+      - Owner: collabnix
       - Repo: awesome-nvidia-nemotron
       - Main file: README.md
       - Default branch: main
@@ -286,7 +286,7 @@ agents:
 
       ## Workflow
 
-      1. **Read current README.md** from ajeetraina/awesome-nvidia-nemotron (main branch)
+      1. **Read current README.md** from collabnix/awesome-nvidia-nemotron (main branch)
          to get the latest SHA and content
       2. **Create a branch** named one of:
          - `curator/add-resources-YYYY-MM-DD` (for new content)
@@ -296,9 +296,24 @@ agents:
       3. **Update README.md** inserting new entries into the correct sections,
          preserving all existing content and formatting exactly
       4. **Create a PR** with:
-         - Clear title: e.g., "feat: Add 3 new Nemotron resources [curator-bot]"
-         - Body listing all changes with links and descriptions
-         - Label: "curator-bot" if available
+         - Clear title: e.g., "feat: Add 3 new Nemotron resources [agent-bot]"
+         - Body that starts with the agent-managed banner (see below) followed by
+           a list of all changes with links and descriptions
+         - Label: "agent-bot" if available, otherwise "curator-bot"
+
+      ## PR Body Template
+      Every PR must begin with this banner so contributors can immediately see it
+      was raised by the automated agent:
+
+      ```
+      > 🤖 **This PR was automatically raised by the Nemotron Auto-Curator Agent.**
+      > The agent discovered, validated, and formatted these resources autonomously.
+      > Please review the additions before merging.
+
+      ---
+      ```
+
+      Then list the resources added/changed.
 
       ## Section Formatting Rules (CRITICAL)
       Match the existing formatting style in each section exactly.
@@ -342,7 +357,7 @@ agents:
       - Verify markdown renders correctly before creating the PR
 
       ## Repository Details
-      - Owner: ajeetraina
+      - Owner: collabnix
       - Repo: awesome-nvidia-nemotron
       - File: README.md
       - Default branch: main
