@@ -35,13 +35,13 @@ models:
   # Primary model: Llama Nemotron Ultra for complex curation and reasoning tasks
   smart:
     provider: nvidia
-    model: nvidia/llama-3_1-nemotron-nano-8b-v1
+    model: nvidia/llama-3.1-nemotron-nano-8b-v1
     max_tokens: 8192
 
   # Fast model: Llama Nemotron Nano for simpler validation tasks
   fast:
     provider: nvidia
-    model: nvidia/llama-3_1-nemotron-nano-8b-v1
+    model: nvidia/llama-3.1-nemotron-nano-8b-v1
     max_tokens: 4096
 
 agents:
