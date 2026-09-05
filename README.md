@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License](https://img.shields.io/badge/License-CC0-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Last Updated](https://img.shields.io/badge/Updated-March%202026-blue.svg)](#)
+[![Last Updated](https://img.shields.io/badge/Updated-September%202026-blue.svg)](#)
 
 A curated list of NVIDIA Nemotron models, datasets, tools, and resources.  
 Open weights · Open data · Built for agentic AI.
@@ -497,9 +497,9 @@ NVIDIA Nemotron models are deployed across industries — from healthcare and fi
 
 | Session | Description | Event |
 |---|---|---|
-| **[Nemotron 3: Architecture, Training, and Open Innovation](https://www.nvidia.com/gtc/)** | NVIDIA Research presents Nemotron 3 MoE architecture | GTC 2026 |
-| **[NeMo Gym: RL for Agentic AI](https://www.nvidia.com/gtc/)** | Post-training with reinforcement learning in NeMo Gym | GTC 2026 |
-| **[Building Production AI Agents with NIM](https://www.nvidia.com/gtc/)** | Enterprise deployment patterns with NVIDIA NIM | GTC 2026 |
+| **[Nemotron 3: Architecture, Training, and Open Innovation](https://www.nvidia.com/gtc/on-demand/)** | NVIDIA Research presents Nemotron 3 MoE architecture | GTC 2026 (on-demand) |
+| **[NeMo Gym: RL for Agentic AI](https://www.nvidia.com/gtc/on-demand/)** | Post-training with reinforcement learning in NeMo Gym | GTC 2026 (on-demand) |
+| **[Building Production AI Agents with NIM](https://www.nvidia.com/gtc/on-demand/)** | Enterprise deployment patterns with NVIDIA NIM | GTC 2026 (on-demand) |
 
 ### Community & Creator Videos
 
@@ -555,12 +555,19 @@ The official NVIDIA podcast covers AI research, applications, and company interv
 
 | Event | Date | Location | Nemotron Relevance |
 |---|---|---|---|
+| **[NVIDIA GTC DC 2026](https://www.nvidia.com/gtc/)** | October 2026 | Washington, D.C. | Sovereign & public-sector AI sessions featuring Nemotron on NIM |
+| **[SC26](https://sc26.supercomputing.org/)** | November 2026 | St. Louis, MO | HPC + AI research sessions covering Nemotron training at scale |
+| **[NeurIPS 2026](https://neurips.cc/)** | December 2026 | TBD | NVIDIA research papers on Nemotron and agentic AI |
+
+### Past 2026 Events (for reference)
+
+| Event | Date | Location | Nemotron Relevance |
+|---|---|---|---|
 | **[NVIDIA GTC 2026](https://www.nvidia.com/gtc/)** | March 17–21, 2026 | San Jose, CA + Virtual | Major Nemotron sessions: Nemotron 3, NeMo Gym, agentic AI |
-| **[ICLR 2026](https://iclr.cc/)** | April–May 2026 | TBD | AI research papers including Nemotron training methods |
+| **[ICLR 2026](https://iclr.cc/)** | April–May 2026 | Rio de Janeiro, Brazil | AI research papers including Nemotron training methods |
 | **[Google I/O 2026](https://io.google/)** | May 2026 | Mountain View, CA | NVIDIA AI partner ecosystem announcements |
 | **[Microsoft Build 2026](https://build.microsoft.com/)** | May 2026 | Seattle, WA | Azure + NVIDIA NIM integration updates |
 | **[ACL 2026](https://2026.aclweb.org/)** | Summer 2026 | TBD | NLP research with Nemotron models |
-| **[NeurIPS 2026](https://neurips.cc/)** | December 2026 | TBD | NVIDIA research papers on Nemotron and agentic AI |
 
 ### NVIDIA Developer Events
 
