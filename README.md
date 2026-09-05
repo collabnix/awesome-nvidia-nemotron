@@ -555,7 +555,7 @@ The official NVIDIA podcast covers AI research, applications, and company interv
 
 | Event | Date | Location | Nemotron Relevance |
 |---|---|---|---|
-| **[NVIDIA GTC DC 2026](https://www.nvidia.com/gtc/)** | October 2026 | Washington, D.C. | Sovereign & public-sector AI sessions featuring Nemotron on NIM |
+| **[NVIDIA GTC DC 2026](https://www.nvidia.com/en-us/events/)** | October 2026 | Washington, D.C. | Sovereign & public-sector AI sessions featuring Nemotron on NIM |
 | **[SC26](https://sc26.supercomputing.org/)** | November 2026 | St. Louis, MO | HPC + AI research sessions covering Nemotron training at scale |
 | **[NeurIPS 2026](https://neurips.cc/)** | December 2026 | TBD | NVIDIA research papers on Nemotron and agentic AI |
 
